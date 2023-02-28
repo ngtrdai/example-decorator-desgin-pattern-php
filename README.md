@@ -32,13 +32,27 @@ classDiagram
 ## Usage
 
 ```php
-$banhMi = new BanhMi();
-$banhMi = new DuaLeo($banhMi);
-$banhMi = new ChaLua($banhMi);
-$banhMi = new TuongOt($banhMi);
-$banhMi = new Thit($banhMi);
+$firstBanhMi = new Thit(
+                new TuongOt(
+                    new DuaLeo(
+                        new ChaLua(
+                            new BanhMi()))));
 
-echo $banhMi->Cost();
+echo "Cost of first banh mi: " . $firstBanhMi->cost() . " VND" . PHP_EOL;
+
+$secondBanhMi = new Thit(
+                    new TuongOt(
+                        new DuaLeo(
+                            new BanhMi()
+                        )
+                    )
+                );
+
+echo "Cost of second banh mi: " . $secondBanhMi->cost() . " VND" . PHP_EOL;
 ```
 
 ## Output
+```bash
+Cost of first banh mi: 12000 VND
+Cost of second banh mi: 9500 VND
+```
