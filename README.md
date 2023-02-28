@@ -3,6 +3,9 @@
 This is a simple implementation of the decorator design pattern in PHP.
 
 ## Installation and run
+1. Clone this repository
+2. Run `composer install`
+3. Run `php src/main.php`
 
 ## UML diagram
 ```mermaid
